@@ -1,0 +1,390 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@subacitor 
+subacitor
+/
+wbsite
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+wbsite/style-new.css
+@subacitor
+subacitor Create style-new.css
+Latest commit 8594b94 3 minutes ago
+ History
+ 1 contributor
+347 lines (301 sloc)  6.05 KB
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100%;
+}
+
+.footer{
+    position: relative;
+    height: 10vh;
+    background: rgb(66, 64, 64);
+}
+.copyright{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.drop-down-lv2{
+    display: none;
+}
+.drop-down-lv2-2{
+    display: none;
+}
+
+.scroll-to-top {
+    position: relative;
+}
+.btn-position {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 20;
+
+}
+.btnstyle {
+    background-color: rgb(95, 174, 179);
+    border: none;
+    border-radius: 7px;
+    font-weight: lighter;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    cursor: pointer;
+    /* transition: all 0.5s ease-in-out; */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 99;
+}
+.btnstyle {
+    transition-timing-function: ease;
+}
+
+.btnstyle.active {
+    opacity: 1;
+}
+
+.mySwiper {
+    width: 100% !important;
+}
+/* ========================================= */
+
+.wrapper-side-bar ul {
+    list-style: none;
+}
+
+.wrapper-side-bar ul li {
+    background: #33383e;
+    padding: 20px;
+    display: block;
+}
+
+.wrapper-side-bar ul li:hover {
+    background: #202222;
+}
+
+.wrapper-side-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.li-cursor{
+    cursor: pointer;
+}
+.side-bar {
+    position: absolute;
+    opacity: 0;
+    width: 350px;
+    height: 100%;
+    top: 0;
+    left: -400px;
+    overflow: hidden;
+    position: fixed;
+    background: #33383e;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.enter {
+    opacity: 1;
+    left: 0;
+}
+
+.close-menu {
+    color: white;
+    margin: 3%;
+    text-align: right;
+}
+.close{
+    cursor: pointer;
+}
+/* ========================================= */
+
+
+.menu {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to right, #ff99cc 0%, #3333cc 100%);
+    z-index: 998;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li:hover {
+    transition: 0.9s;
+    background: blue;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Koulen', cursive;
+}
+
+.show-case {
+    background-image: url(https://i.pinimg.com/originals/aa/ec/12/aaec12affbb02f7ddbd86750492b8224.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.show-case-2 {
+    background-image: url(https://i.pinimg.com/originals/aa/ec/12/aaec12affbb02f7ddbd86750492b8224.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.show-case-3 {
+    background-image: url(https://i.pinimg.com/originals/aa/ec/12/aaec12affbb02f7ddbd86750492b8224.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.toggle-bar {
+    padding: 0 5px;
+    font-size: 2em;
+    display: none;
+    cursor: pointer;
+}
+
+.toggle-bar:hover {
+    padding: 0 5px;
+    border: 1px solid black;
+    background: red;
+}
+
+.text-center {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Koulen', cursive;
+    font-family: 'Monoton', cursive;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper {
+    width: 100vh;
+    height: 100vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.row {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img img {
+    max-width: 400px;
+    height: auto;
+}
+
+.card {
+    display: block;
+    margin: 10px;
+    padding: 20px;
+    padding-bottom: 50px;
+    border: 1px solid gray;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+    .side-bar{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .content {
+        height: 100vh;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    img {
+        width: 35vh;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .show-case {
+        min-height: 50vh;
+    }
+
+    .toggle-bar {
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        right: 60%;
+        display: block;
+    }
+
+    .logo {
+        position: relative;
+        left: 16%;
+    }
+
+    .text-center {
+        text-align: center;
+        width: 100%;
+        font-size: 3em;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        word-spacing: 14px;
+    }
+
+    .video {
+        display: none;
+    }
+
+    .show-case {
+        height: 100vh;
+        background-color: rgb(104, 144, 167);
+        background-image: none;
+    }
+    .card-hide{
+        display: none;
+    }
+    .row {
+        flex-direction: column;
+    }
+}
+.
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
