@@ -5,251 +5,187 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUBACITO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-        <link rel="stylesheet" href="style.css">
-        <script src="Mydata.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="shortcut icon" type="x-icon"
+    href="https://i.pinimg.com/736x/50/a5/18/50a518a1aaab566d30fa31ec3d66af7e.jpg">
+    <link rel="stylesheet" href="style-new.css">
+    <title>SUBACITO - TRANG CHỦ</title>
 </head>
-<body style="background: rgb(60, 141, 188)">
-	<style>
-		.spacing{
-			margin: 2% 1%;
-		}
-        .form-group{
-            margin: 10px 0px !important;
-        }
-        button:hover{
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-        }
-	</style>
-    
-    
-    <div class="wrapper__all container" style="margin: 10px auto; border: 1px solid gray; height: 100vh;  padding: 10px; background: rgb(255, 255, 255); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.4);">
-        <button id="btnAdd" class="btn btn-primary spacing">ADD</button>
-        <div class="container">
-            <table class="table" id="tblAct">
-                <thead>
-                    <tr style="border: 1px solid gray">
-                        <th scope="col" style="border: 1px solid gray"><span>#</span></th>
-                        <th scope="col" style="border: 1px solid gray"><span>NAME</span></th>
-                        <th scope="col" style="border: 1px solid gray"><span>ACTION</span></th>
-                        <th scope="col" style="border: 1px solid gray"><span>TIME</span></th>
-			<th scope="col" style="border: 1px solid gray"><span>ACTION</span></th>
-                    </tr>
-                </thead>
-                <tbody id="tblAct">
 
-                </tbody>
-            </table>
-        </div>
-        <!-- Modal -->
-        <div class="myModal" id="myModal">
-            <div class="form-wrapper">
-                <span class="close" style="font-size: 2.5em; cursor: pointer;">&times; </span>
-                <form>
-                    <div class="form-group">
-                        <span id="txtId"></span>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="" id="txtName" placeholder="Crush">
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="" id="txtAction" placeholder="Action">
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="" id="txtCreatedAt" placeholder="Created At">
-                    </div>
-
-                    <div class="form-group d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary" id="btnModalAdd">ADD</button>
-                        <button type="button" class="btn btn-secondary" id="btnModalCancel">CANCEL</button>
-                    </div>
-                </form>
-
+<body>
+    <!-- <div class="container"> -->
+    <div class="side-bar">
+        <div class="close-menu"><span class="close"><i class="fa-solid fa-xmark fa-2x"></i></span></div>
+        <div class="wrapper-side-bar">
+            <div class="nav-side-bar">
+                <ul>
+                    <li onclick="location.href='#'" class="li-cursor">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a>QUẢN LÝ CRUSH</a>
+                            <div class="click-to-show" style="font-size: 1.5em; color: white;"><i class="fa-solid fa-plus"></i></div>
+                            <div class="click-to-hide" style="display: none; font-size: 1.5em; color: white;"><i class="fa-solid fa-minus"></i></div>
+                        </div>
+                        <ul class="drop-down-lv2">
+                            <li class="drop-down-lv2-item"><a href="#">1</a></li>
+                            <li class="drop-down-lv2-item"><a href="#">2</a></li>
+                            <li class="drop-down-lv2-item"><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="location.href='#'" class="li-cursor">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a>HƯỚNG DẪN</a>
+                            <div class="click-to-show-2" style="font-size: 1.5em; color: white;"><i class="fa-solid fa-plus"></i></div>
+                            <div class="click-to-hide-2" style="display: none; font-size: 1.5em; color: white;"><i class="fa-solid fa-minus"></i></div>
+                        </div>
+                        <ul class="drop-down-lv2-2">
+                            <li class="drop-down-lv2-item"><a href="#">1</a></li>
+                            <li class="drop-down-lv2-item"><a href="#">2</a></li>
+                            <li class="drop-down-lv2-item"><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="location.href='#'" class="li-cursor"><a>LỊCH SỬ</a></li>
+                    <li onclick="location.href='#'" class="li-cursor"><a>QUÀ NHẬN ĐƯỢC</a></li>
+                </ul>
             </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="myModal2" id="myModal2">
-            <div class="form-wrapper">
-                <span class="close-modal" style="font-size: 2.5em; cursor: pointer;">&times; </span>
-                <form>
-                    <div class="form-group">
-                        <span id="txtId"></span>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="" id="txtNameUpdate" placeholder="Crush">
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="" id="txtActionUpdate" placeholder="Action">
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="" id="txtCreatedAtUpdate"
-                            placeholder="Created At">
-                    </div>
-
-                    <div class="form-group d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary" id="btnModalUpdate">UPDATE</button>
-                        <button type="button" class="btn btn-secondary" id="btnModalCancel2">CANCEL</button>
-                    </div>
-                </form>
-
-            </div>
+            
         </div>
     </div>
-    
-    
+
+    <div class="menu">
+        <div class="logo">SUBACITO</div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">QUẢN LÝ CRUSH</a></li>
+                <li><a href="#">HƯỚNG DẪN</a></li>
+                <li><a href="#">LỊCH SỬ</a></li>
+                <li><a href="#">QUÀ NHẬN ĐƯỢC</a></li>
+            </ul>
+        </div>
+        <div class="toggle-bar" id="side-bar-button">|||</div>
+    </div>
+
+
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="show-case">
+                    <div class="text-center">CRUSH LÀ GÌ?</div>
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="show-case-2">
+                    <div class="text-center">CRUSH LÀ GÌ?</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="show-case-3">
+                    <div class="text-center">CRUSH LÀ GÌ?</div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <section class="content ">
+        <div class="row">
+            <div class="card" onclick="location.href='#'">
+                <div class="img">
+                    <img src="crush-la-gi-8.jpg" alt="">
+                </div>
+                <div class="text">CRUSH</div>
+            </div>
+            <div class="card" onclick="location.href='#'">
+                <div class="img">
+                    <img src="crush-la-gi-8.jpg" alt="">
+                </div>
+                <div class="text">CRUSH</div>
+            </div>
+            <div class="card card-hide" onclick="location.href='#'">
+                <div class="img">
+                    <img src="crush-la-gi-8.jpg" alt="">
+                </div>
+                <div class="text">CRUSH</div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="copyright">SUBACITO</div>
+    </section>
+    <button type="button" class="scroll-to-top btn-position btnstyle"><i
+        class="fa-solid fa-angle-up"></i></button>
+
+
+
+
+
+    <!-- </div> -->
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
     <script>
- 
-$(".close-modal").click(function(){
-    $("#myModal2").css("display", "none");
-}) 
-$("#btnAdd").click(function () {
-    $("#myModal").css("display", "block");
-
-})
-
-$(".close").click(function () {
-    $("#myModal").css("display", "none");
-})
-
-$(".close-modal").click(function () {
-    $("#myModal").hide();
-})
-$("#btnModalCancel").click(function () {
-    $("#myModal").hide();
-})
-
-$("#edit").click(function () {
-    $("#myModal2").css("display", "block");
-})
-$("#btnModalCancel2").click(function () {
-    $("#myModal2").css("display", "none");
-})
-
-
-
-
-
-var arrEle;
-function loadData() {
-    $("#tblAct tbody").empty();
-    var strResult = "";
-    //Tự động tải dữ liệu khi tải trang 
-    $.ajax(
-        {
-            url: "https://62874cbde9494df61b35fb64.mockapi.io/dataUser",
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                arrEle = data;
-                for (var i = 0; i < data.length; i++) {
-                    strResult = strResult + "<tr> <th scope='row'>" + data[i].id + "</th>" +
-                        "<td>" + data[i].name + "</td>" +
-                        "<td>" + data[i].action + "</td>" +
-                        "<td>" + data[i].createdAt + "</td>" +
-                        "<td>" +
-                        '<img class="actionIcon" id="edit" src="download.png" onclick="editE(' + data[i].id + ')" alt="Edit" srcset=" ">' +
-                        '<img class="actionIcon" src="2496733.png" onclick="deleteE(' + data[i].id + ')" alt="Delete" srcset=" ">' +
-                        "</td>" +
-                        "</tr>";
-                }
-                console.log(strResult);
-                $("#tblAct tbody").append(strResult);
-            }
-        }
-    );
-}
-
-
-$("#btnModalAdd").click(function () {
-    var data = {};
-    data.createdAt = $("#txtCreatedAt").val();
-    data.action = $("#txtAction").val();
-    data.name = $("#txtName").val();
-
-    $.ajax({
-        url: "https://62874cbde9494df61b35fb64.mockapi.io/dataUser",
-        type: "POST",
-        data: data,
-        success: function (result) {
-            $("#myModal").css("display", "none");
-            $("#tbody").empty();    
-            loadData();
-        }
-    })
-    console.log(data);
-});
-
-
-
-//Fixed Function
-function editE(id) {
-    $("#myModal2").css("display", "block");
-    for (var i = 0; i < arrEle.length; i++) {
-
-        if (arrEle[i].id == id) {
-            $("#txtId").val(arrEle[i].id);
-            $("#txtCreatedAtUpdate").val(arrEle[i].createdAt);
-            $("#txtActionUpdate").val(arrEle[i].action);
-            $("#txtNameUpdate").val(arrEle[i].name);
-            break;
-        }
-    }
-    loadData();
-}
-
-$("#btnModalUpdate").click(function () {
-
-    var dataUpdate = {};
-    dataUpdate.createdAt = $("#txtCreatedAtUpdate").val();
-    dataUpdate.action = $("#txtActionUpdate").val();
-    dataUpdate.name = $("#txtNameUpdate").val();
-    var id = $("#txtId").val();
-    console.log(dataUpdate);
-
-    $.ajax({
-        url: "https://62874cbde9494df61b35fb64.mockapi.io/dataUser/" + id,
-        type: "PUT",
-        data: dataUpdate,
-        success: function () {
-            //dong form
-            $("#myModal2").css("display", "none");
-            loadData();
-        }
-    })
-
-});
-
-//Delete Function
-function deleteE(id) {
-    $.ajax({
-        url: "https://62874cbde9494df61b35fb64.mockapi.io/dataUser/" + id,
-        type: "DELETE",
-        success: function (data) {
-            console.log(data);
-            loadData();
-        }
-    })
-}
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+    <!-- ==================================================== -->
+    <script>
+        $("#side-bar-button").click(function () {
+            $("#side-bar-button").css("opacity", "0");
+            $(".side-bar").addClass("enter");
+        })
+
+        $(".close").click(function () {
+            $(".side-bar").removeClass("enter");
+            $("#side-bar-button").css("opacity", "1");
+        }) 
+    </script>
+    <!-- ==================================================== -->
+    <script>
+        const nav = document.querySelector("nav");
+    const btnstyle = document.querySelector(".btnstyle");
+    btnstyle.addEventListener("click", function () {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    });
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 90) {
+        btnstyle.classList.add("active");
+      } else {
+        btnstyle.classList.remove("active");
+      }
+    });
+    </script>
+    <script>
+        $(".click-to-show").click(function(){
+            $(".click-to-show").css("display", "none");
+            $(".click-to-hide").css("display","block");
+            $(".drop-down-lv2").css("display", "block");
+        })
+        $(".click-to-hide").click(function(){
+            $(".click-to-show").css("display", "block");
+            $(".click-to-hide").css("display","none");
+            $(".drop-down-lv2").css("display", "none");
+        })
+
+        $(".click-to-show-2").click(function(){
+            $(".click-to-show-2").css("display", "none");
+            $(".click-to-hide-2").css("display","block");
+            $(".drop-down-lv2-2").css("display", "block");
+        })
+        $(".click-to-hide-2").click(function(){
+            $(".click-to-show-2").css("display", "block");
+            $(".click-to-hide-2").css("display","none");
+            $(".drop-down-lv2-2").css("display", "none");
+        })
+    </script>
 
 </body>
 
